@@ -2,7 +2,6 @@
 
 int main() {
 
-
     char symbole;
     float FirstNum , SecondNum;
 
