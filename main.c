@@ -8,7 +8,7 @@ int main() {
     char s;
     float FirstNum , SecondNum;
 
-    printf("Wich mode you want to use ? (Math : 1) (programming : 2)");
+    printf("Wich mode you want to use ? (Math : 1) (programming : 2)(counter : 3)");
     scanf("%d", &mode);
 
     if(mode == 1) {
@@ -50,6 +50,17 @@ int main() {
         printf("\n What is the numbers you want to calculat ? (Enter two numbers) :");
         scanf("%d %d", &FirstInt, &SecondInt);
         printf("%d '%' %d = %d", FirstInt , SecondInt, FirstInt % SecondInt);
+
+    }else if(mode == 3){
+        int count;
+        printf("Enter a number");
+        scanf("%d", &count);
+
+        for(int i = 1; i <= count; i++) {
+
+            printf("%d", i);
+
+        };
 
     };  
 
