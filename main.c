@@ -52,7 +52,7 @@ int main() {
         scanf("%d %d", &FirstInt, &SecondInt);
         printf("%d '%' %d = %d", FirstInt , SecondInt, FirstInt % SecondInt);
 
-    }else if(mode == 3){ // The third mode of the calc (Counter)
+    }else if(mode == 3){  // The third mode of the calc (Counter)
         int count;
         printf("Enter a number please :");
         scanf("%d", &count);
