@@ -3,7 +3,7 @@
 int main() {
 
 
-    // vars
+    // =====Important vars=====
     int mode;
     int exit = 1;
     char s;
@@ -11,7 +11,7 @@ int main() {
 
     printf("Wich mode you want to use ? (Math : 1) (programming : 2)(counter : 3)");
     scanf("%d", &mode);
-    // The first mode of the calc
+    // ======a do while loop to exit the programm when the user wants to====;
     do{
         if(mode == 1) {
 
@@ -21,7 +21,7 @@ int main() {
         printf("What is the numbers you want to calculat ? (Enter two numbers) : ");
         scanf("%f %f", &FirstNum, &SecondNum);
 
-        // the calcul
+        // ======The first mode=======
 
         switch (s)
         {
@@ -46,15 +46,17 @@ int main() {
             break;
         };
 
-    
-    }else if(mode == 2) { // The second mode of the calc (Programming)
+    // ======The second mode of the calc (Programming)======
+    }else if(mode == 2) {
         int FirstInt, SecondInt; 
         printf("\n Warning : THE ONLY AVAILABLE SYMBOLE IS THE REMINDER SYMBOLE");
         printf("\n What is the numbers you want to calculat ? (Enter two numbers) :");
         scanf("%d %d", &FirstInt, &SecondInt);
         printf("%d REMINDER %d = %d", FirstInt , SecondInt, FirstInt % SecondInt);
 
-    }else if(mode == 3){  // The third mode of the calc (Counter)
+    // =======The third mode of the calc (Counter)=======
+
+    }else if(mode == 3){ 
         int count;
         printf("Enter a numbre please :");
         scanf("%d", &count);
@@ -65,11 +67,14 @@ int main() {
             printf("%d\n", i);
 
         };
-
+    // =======if the user picked an invalid number printf the following=======
     }else {
-        printf("Sorry! the mode you are asking for isn't available");
+
+        printf("\nSorry! the mode you are asking for isn't available");
     };
-        printf("If you want to exit from the programm type 0 : ");
+
+    // ======= this part to change the value of var exit if the users want to exit from the programm =====
+        printf("\nIf you want to exit from the programm type 0 : ");
         scanf("%d" , &exit);
     }while(exit == 1);
 
