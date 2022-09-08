@@ -5,16 +5,18 @@ int main() {
 
     // vars
     int mode;
+    int exit = 1;
     char s;
     float FirstNum , SecondNum;
 
     printf("Wich mode you want to use ? (Math : 1) (programming : 2)(counter : 3)");
     scanf("%d", &mode);
     // The first mode of the calc
-    if(mode == 1) {
+    do{
+        if(mode == 1) {
 
         printf("wich symbole you'll like to use ? : ");
-        scanf("%s", &s);
+        scanf("%c", &s);
 
         printf("What is the numbers you want to calculat ? (Enter two numbers) : ");
         scanf("%f %f", &FirstNum, &SecondNum);
@@ -47,18 +49,19 @@ int main() {
     
     }else if(mode == 2) { // The second mode of the calc (Programming)
         int FirstInt, SecondInt; 
-        printf("\n Warning : THE ONLY AVAILABLE SYMBOLE IS %");
+        printf("\n Warning : THE ONLY AVAILABLE SYMBOLE IS THE REMINDER SYMBOLE");
         printf("\n What is the numbers you want to calculat ? (Enter two numbers) :");
         scanf("%d %d", &FirstInt, &SecondInt);
-        printf("%d '%' %d = %d", FirstInt , SecondInt, FirstInt % SecondInt);
+        printf("%d REMINDER %d = %d", FirstInt , SecondInt, FirstInt % SecondInt);
 
     }else if(mode == 3){  // The third mode of the calc (Counter)
         int count;
-        printf("Enter a number please :");
+        printf("Enter a numbre please :");
         scanf("%d", &count);
-
-        for(int i = 1; i <= count; i++) {
-
+        for(int i = 1; i < count; i++) {
+            
+            
+            
             printf("%d\n", i);
 
         };
@@ -66,5 +69,10 @@ int main() {
     }else {
         printf("Sorry! the mode you are asking for isn't available");
     };
+        printf("If you want to exit from the programm type 0 : ");
+        scanf("%d" , &exit);
+    }while(exit == 1);
+
+    
 
 };
