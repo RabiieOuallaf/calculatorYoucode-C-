@@ -10,7 +10,7 @@ int main() {
 
     printf("Wich mode you want to use ? (Math : 1) (programming : 2)(counter : 3)");
     scanf("%d", &mode);
-
+    // The first mode of the calc
     if(mode == 1) {
 
         printf("wich symbole you'll like to use ? : ");
@@ -43,7 +43,7 @@ int main() {
             break;
         };
 
-
+    // The second mode of the calc (Programming)
     }else if(mode == 2) {
         int FirstInt, SecondInt; 
         printf("\n Warning : THE ONLY AVAILABLE SYMBOLE IS %");
@@ -51,17 +51,19 @@ int main() {
         scanf("%d %d", &FirstInt, &SecondInt);
         printf("%d '%' %d = %d", FirstInt , SecondInt, FirstInt % SecondInt);
 
-    }else if(mode == 3){
+    }else if(mode == 3){ // The third mode of the calc (counter)
         int count;
         printf("Enter a number");
         scanf("%d", &count);
 
         for(int i = 1; i <= count; i++) {
 
-            printf("%d", i);
+            printf("%d\n", i);
 
         };
 
-    };  
+    }else {
+        printf("Sorry! the mode you are asking for isn't available");
+    };
 
 };
