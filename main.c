@@ -53,7 +53,7 @@ int main() {
 
     }else if(mode == 3){ // The third mode of the calc (counter)
         int count;
-        printf("Enter a number");
+        printf("Enter a number please :");
         scanf("%d", &count);
 
         for(int i = 1; i <= count; i++) {
