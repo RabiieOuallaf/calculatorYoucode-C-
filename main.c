@@ -44,8 +44,8 @@ int main() {
             break;
         };
 
-    // The second mode of the calc (Programming)
-    }else if(mode == 2) {
+    
+    }else if(mode == 2) { // The second mode of the calc (Programming)
         int FirstInt, SecondInt; 
         printf("\n Warning : THE ONLY AVAILABLE SYMBOLE IS %");
         printf("\n What is the numbers you want to calculat ? (Enter two numbers) :");
