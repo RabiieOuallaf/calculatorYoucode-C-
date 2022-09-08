@@ -40,6 +40,7 @@ int main() {
             break;
         
         default:
+            printf("Sorry but you've chosed an invalid symbole");
             break;
         };
 
