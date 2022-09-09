@@ -119,10 +119,11 @@ int main() {
             printf("%.1f / %.1f = %.1f" , FirstNum, SecondNum, FirstNum/SecondNum);
             break;
         case '%': // === reminder of a division === //
-            printf("What is the numbers you want to know the reminder of thier division ? (Enter two numbers) : ");
-            scanf("%f %f", &FirstNum, &SecondNum);
             int FirstInt, SecondInt;
-            printf("%.1f reminder %.1f" , FirstInt % SecondInt);
+            printf("What is the numbers you want to know the reminder of thier division ? (Enter two numbers) : ");
+            scanf("%d %d", &FirstInt, &SecondInt);
+            printf("%d reminder %d  = %d " , FirstInt, SecondInt, FirstInt % SecondInt);
+            break;
         case '!': // === factorial === //
             int n,factorial;
             printf("Wich number you want to know the factorial of it? : ");
@@ -132,36 +133,42 @@ int main() {
                 factorial=factorial*i;
             };
             printf("\nFactorial of %d is : %d",n , factorial);
+            break;
         case '^': // === power === //
             double p,b;
             printf("\n Pleae enter the base and the power : ");
             scanf("%lf%lf", &p,&b);
             double r = pow(p,b);
             printf("The power is %.1lf: ", r);
+            break;
         case '4': // === square === //
             double s ,res; 
             printf("Enter a number : ");
             scanf("%lf" , &s);
             res = sqrt(s);
             printf("The Square number of %.1lf is : %.1lf : " , s, res );
+            break;
         case 's': // === Sin === //
             double si, result;
             printf("Enter a number please : ");
             scanf("%lf", &si);
             result = sin(si);
             printf("The sin of %.3lf is : %.3lf ", si, result);
+            break;
         case 'c': // === cos === //
             double co, ree;
             printf("Enter a number please : ");
             scanf("%lf", &co);
             ree = cos(co);
             printf("The cos of %.3lf is : %.3lf : ", co , ree);
+            break;
         case 't': // === tan === //
             double ta, tres;
             printf("Enter a number please : "); 
             scanf("%lf", &ta);
             tres = tan(ta);
             printf("The tan of %.3lf is : %.3lf : ", ta , tres);
+            break;
         
         default:
             printf("Sorry, you've enterd an invalid symbole!");
