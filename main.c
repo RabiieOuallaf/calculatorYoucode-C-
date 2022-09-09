@@ -61,7 +61,7 @@ int main() {
 
         if(mode == 1) {
 
-        printf("wich symbole you'll like to use ? : ");
+        printf("wich symbole you'll like to use ? : (+ , - , * , / , % , ! , ^ , 4 : square , sin() : s , cos() : c , tan() : t ) :  ");
         scanf("%s", &s);
 
         
@@ -85,36 +85,45 @@ int main() {
 
         */
 
+        /* 
+            === Important Note ===
+            In the very basic mathematical problems (Such as addition and division ...)
+                i've left the work to the built-in functions of c;
+                in some other advanced topics (Such as sin and tan ..) i've used the math header file to do the work for me;
+    
+
+        */   
+          
         switch (s)
-        {
+        { // === Addition === // 
         case '+':
             printf("What is the numbers you want to addition ? (Enter two numbers) : ");
             scanf("%f %f", &FirstNum, &SecondNum);
             printf("%.1f + %.1f = %.1f" , FirstNum, SecondNum, FirstNum+SecondNum);
             break;
 
-        case '-':
+        case '-': // === substriction === //
             printf("What is the numbers you want to substriction ? (Enter two numbers) : ");
             scanf("%f %f", &FirstNum, &SecondNum);
             printf("%.1f - %.1f = %.1f", FirstNum, SecondNum,FirstNum-SecondNum);
             break;
         
-        case '*':
+        case '*': // === multiplication === //
             printf("What is the numbers you want to multiplication ? (Enter two numbers) : ");
             scanf("%f %f", &FirstNum, &SecondNum);
             printf("%.1f * %.1f = %.1f", FirstNum, SecondNum, FirstNum*SecondNum);
             break;
-        case '/':
+        case '/': // === division === //
             printf("What is the numbers you want to division ? (Enter two numbers) : ");
             scanf("%f %f", &FirstNum, &SecondNum);
             printf("%.1f / %.1f = %.1f" , FirstNum, SecondNum, FirstNum/SecondNum);
             break;
-        case '%':
+        case '%': // === reminder of a division === //
             printf("What is the numbers you want to know the reminder of thier division ? (Enter two numbers) : ");
             scanf("%f %f", &FirstNum, &SecondNum);
             int FirstInt, SecondInt;
             printf("%.1f reminder %.1f" , FirstInt % SecondInt);
-        case '!':
+        case '!': // === factorial === //
             int n,factorial;
             printf("Wich number you want to know the factorial of it? : ");
             scanf("%d", &n);
@@ -123,15 +132,39 @@ int main() {
                 factorial=factorial*i;
             };
             printf("\nFactorial of %d is : %d",n , factorial);
-        case '^':
+        case '^': // === power === //
             double p,b;
             printf("\n Pleae enter the base and the power : ");
             scanf("%lf%lf", &p,&b);
             double r = pow(p,b);
             printf("The power is %.1lf: ", r);
+        case '4': // === square === //
+            double s ,res; 
+            printf("Enter a number : ");
+            scanf("%lf" , &s);
+            res = sqrt(s);
+            printf("The Square number of %.1lf is : %.1lf : " , s, res );
+        case 's': // === Sin === //
+            double si, result;
+            printf("Enter a number please : ");
+            scanf("%lf", &si);
+            result = sin(si);
+            printf("The sin of %.3lf is : %.3lf ", si, result);
+        case 'c': // === cos === //
+            double co, ree;
+            printf("Enter a number please : ");
+            scanf("%lf", &co);
+            ree = cos(co);
+            printf("The cos of %.3lf is : %.3lf : ", co , ree);
+        case 't': // === tan === //
+            double ta, tres;
+            printf("Enter a number please : "); 
+            scanf("%lf", &ta);
+            tres = tan(ta);
+            printf("The tan of %.3lf is : %.3lf : ", ta , tres);
         
         default:
-            
+            printf("Sorry, you've enterd an invalid symbole!");
             break;
         };
 
