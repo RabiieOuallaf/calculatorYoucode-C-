@@ -4,9 +4,9 @@ in this little programm i've used the following concepts :
 
 ⚡ ==== Variables === ⚡
 
-int : integer , this type of variables accept numbers such as : -1 -2 10 2335 ..; it's use 4bytes of memorey;
+int : integer , this type of variables accept numbers such as : -1 -2 10 2335 ..; it's use 4 bytes of memorey;
 float : this type of varibales accept numbers such as : 3.14 , 6.54 , 4.345 , 6-7 digits;  it's use 4bytes of memorey;
-double : almost the same as float just it's accept up to 16 digits. it's use 8bytes of memorey
+double : almost the same as float just it's accept up to 16 digits. it's use 8 bytes of memorey
 
 
 📛 !! Note !! 📛
@@ -35,4 +35,6 @@ I've used only a few of them (like =! == ..);
 for better understanding please check the sourc code and this article : https://byjus.com/gate/logical-operators-in-c/
 
 ==== end ====
+
+created by <3 Rabie Ouallaf ⚡
 
