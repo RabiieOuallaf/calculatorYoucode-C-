@@ -25,7 +25,7 @@ int main() {
 
     // ==== la fonction printf demandera à l'utilisateur de choisir le numéro de mode qu'il souhaite. ==== // 
 
-    printf("Wich mode you want to use ? (Scientific calculator : 1) (counter : 2) (Punshiment game : 3) : ");
+    printf("Wich mode you want to use ? (Scientific calculator : 1) (counter : 2) (Punshiment game : 3) (Second level mathematical equation : 4): ");
     scanf("%d", &mode);
     // ==== une boucle do while pour sortir du programme lorsque l'utilisateur veut ==== //
 
@@ -212,19 +212,35 @@ int main() {
             printf("\nDon't do it again!!");
             i++;
         };
+    }else if(mode == 4) {
+        double a,b,c,delta;
+        printf("Pleas enter the value of the mathematical equation (a,b,c) : ");
+        scanf("%lf%lf%lf" , &a, &b, &c);
+
+        delta = (pow(b,2)- (4*a*c));
+
+
+        if(delta == 0) {
+            printf("Delta = %lf wich is mean that there's no solution to this equation ", delta);
+        }else if(delta > 0) {
+            double Fsolution, Ssolution;
+            Fsolution = b + sqrt(delta) / 2*a;
+            Ssolution = b - sqrt(delta) / 2*a;
+            printf("The equation accept two solution s={%.3lf ; %.3lf}", Fsolution, Ssolution);
+        }else if(delta < 0){
+            printf("Well! the complex number is kinda an advanced topic for this project , so yeah thanks :) ");
+        };
+                
+        break;
     }
     else {
 
         printf("\nSorry! the mode you are asking for isn't available");
     };
-
     // ======= this part to change the value of var exit if the users want to exit from the programm ===== //
         printf("\nIf you want to exit from the programm type 0 if you want to continue type 1 : ");
         scanf("%d" , &exit);
     }while(exit == 1);
-
-    
-
 };
 
 
