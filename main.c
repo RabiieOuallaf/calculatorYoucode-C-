@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include <time.h>
-#include <stdlib.h>  
+#include<math.h> 
 
 int main() {
 
@@ -26,7 +25,7 @@ int main() {
 
     // ==== la fonction printf demandera à l'utilisateur de choisir le numéro de mode qu'il souhaite. ==== // 
 
-    printf("Wich mode you want to use ? (Math : 1)(counter : 2)(Punshiment game : 3) : ");
+    printf("Wich mode you want to use ? (Scientific calculator : 1) (counter : 2) (Punshiment game : 3) : ");
     scanf("%d", &mode);
     // ==== une boucle do while pour sortir du programme lorsque l'utilisateur veut ==== //
 
@@ -65,8 +64,7 @@ int main() {
         printf("wich symbole you'll like to use ? : ");
         scanf("%s", &s);
 
-        printf("What is the numbers you want to calculat ? (Enter two numbers) : ");
-        scanf("%f %f", &FirstNum, &SecondNum);
+        
 
         // ======The first mode=======
 
@@ -90,26 +88,50 @@ int main() {
         switch (s)
         {
         case '+':
-
+            printf("What is the numbers you want to addition ? (Enter two numbers) : ");
+            scanf("%f %f", &FirstNum, &SecondNum);
             printf("%.1f + %.1f = %.1f" , FirstNum, SecondNum, FirstNum+SecondNum);
             break;
 
         case '-':
+            printf("What is the numbers you want to substriction ? (Enter two numbers) : ");
+            scanf("%f %f", &FirstNum, &SecondNum);
             printf("%.1f - %.1f = %.1f", FirstNum, SecondNum,FirstNum-SecondNum);
             break;
         
         case '*':
+            printf("What is the numbers you want to multiplication ? (Enter two numbers) : ");
+            scanf("%f %f", &FirstNum, &SecondNum);
             printf("%.1f * %.1f = %.1f", FirstNum, SecondNum, FirstNum*SecondNum);
             break;
         case '/':
+            printf("What is the numbers you want to division ? (Enter two numbers) : ");
+            scanf("%f %f", &FirstNum, &SecondNum);
             printf("%.1f / %.1f = %.1f" , FirstNum, SecondNum, FirstNum/SecondNum);
             break;
         case '%':
+            printf("What is the numbers you want to know the reminder of thier division ? (Enter two numbers) : ");
+            scanf("%f %f", &FirstNum, &SecondNum);
             int FirstInt, SecondInt;
             printf("%.1f reminder %.1f" , FirstInt % SecondInt);
+        case '!':
+            int n,factorial;
+            printf("Wich number you want to know the factorial of it? : ");
+            scanf("%d", &n);
+            factorial = 1;
+            for(int i=1; i <= n; i++){
+                factorial=factorial*i;
+            };
+            printf("\nFactorial of %d is : %d",n , factorial);
+        case '^':
+            double p,b;
+            printf("\n Pleae enter the base and the power : ");
+            scanf("%lf%lf", &p,&b);
+            double r = pow(p,b);
+            printf("The power is %.1lf: ", r);
         
         default:
-            printf("Sorry but you've chosed an invalid symbole");
+            
             break;
         };
 
