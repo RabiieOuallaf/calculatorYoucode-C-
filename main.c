@@ -221,7 +221,8 @@ int main() {
 
 
         if(delta == 0) {
-            printf("Delta = %lf wich is mean that there's no solution to this equation ", delta);
+            double Osolution = -b/2*a; 
+            printf("This equation accept one solution : %.3lf" , Osolution);
         }else if(delta > 0) {
             double Fsolution, Ssolution;
             Fsolution = b + sqrt(delta) / 2*a;
