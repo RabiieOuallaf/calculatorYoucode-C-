@@ -38,3 +38,8 @@ for better understanding please check the sourc code and this article : https://
 
 created by <3 Rabie Ouallaf ⚡
 
+📛📛📛📛
+Another note : 
+I will build another app to cover all the basic concepts of c ;
+📛📛📛📛
+
