@@ -68,8 +68,7 @@ int main() {
 
     // ==== la fonction printf demandera à l'utilisateur de choisir le numéro de mode qu'il souhaite. ==== // 
 
-    printf("Wich mode you want to use ?\n Scientific calculator : 1\n counter : 2\n Punshiment game : 3\n Second level mathematical equation : 4\n Triangle Drawing : 5: ");
-    scanf("%d", &mode);
+    
     // ==== une boucle do while pour sortir du programme lorsque l'utilisateur veut ==== //
 
     /* === Syntax of the do while === 
@@ -101,6 +100,9 @@ int main() {
             }
 
         */
+
+        printf("Wich mode you want to use ?\n Scientific calculator : 1\n counter : 2\n Punshiment game : 3\n Second level mathematical equation : 4\n Triangle Drawing : 5: ");
+        scanf("%d", &mode);
 
         if(mode == 1) {
 
