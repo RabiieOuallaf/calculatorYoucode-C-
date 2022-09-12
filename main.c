@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h> 
+/* === Functions definition ===
+
+    une fonction est un partie de code qui peut être répété plusieurs fois.
+
+*/
 
 /* === Functions syntax ===
 
@@ -283,7 +288,7 @@ int main() {
             // function call;
 
             triangleDrawing(n);
-            break;
+            
 
         }else {
 
