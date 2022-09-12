@@ -256,43 +256,68 @@ int main() {
             i++;
         };
 
+    /* this is thr fourth mode and in summary it's a code to solve mathematical equations from the second level */
+
     }else if(mode == 4) {
+
         double a,b,c,delta;
+
         printf("Pleas enter the value of the mathematical equation (a,b,c) : ");
         scanf("%lf%lf%lf" , &a, &b, &c);
+
+    /* Calculate delta */
 
         delta = (pow(b,2)- (4*a*c));
 
 
+    /* if\else to maintain all the possible scenarios in this case; */
+
         if(delta == 0) {
+
             double Osolution = -b/2*a; 
             printf("This equation accept one solution : %.3lf" , Osolution);
+
         }else if(delta > 0) {
+
             double Fsolution, Ssolution;
+
             Fsolution = b + sqrt(delta) / 2*a;
+
             Ssolution = b - sqrt(delta) / 2*a;
+
             printf("The equation accept two solution s={%.3lf ; %.3lf}", Fsolution, Ssolution);
+
         }else if(delta < 0){
+            
             printf("Well! the complex number is kinda an advanced topic for this project , so yeah thanks :) ");
         };
         
         /*=== When the user chose the fifth mode call the triangleDrawing(n) to draw a triangle===*/
 
         }else if(mode == 5){
-            int n;
-            // Asking to user the chose the length;
-
-            printf("Please enter a number : ");
+            int n, r, i;
+            printf("How long you want your triangle to be : ");
 
             scanf("%d" , &n);
-            // function call;
 
-            triangleDrawing(n);
+            printf("How many triangles you want to draw ? : ");
+
+            scanf("%d", &r);
+            // Asking to user the chose the length;
+            for(i = 1; i <= r; i++){
+
+                // function call;
+
+                triangleDrawing(n);
+
+            };
+            
+            
             
 
         }else {
 
-        printf("\nSorry! the mode you are asking for isn't available");
+            printf("\nSorry! the mode you are asking for isn't available");
         };
             
 
