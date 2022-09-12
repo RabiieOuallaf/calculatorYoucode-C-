@@ -1,6 +1,44 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include<math.h> 
+#include <math.h> 
+
+/* === Functions syntax ===
+
+int function_name(param){
+
+    the code you want the function to do by giving it an input (param), 
+    And inside the function you'll put a code to give you an output;
+
+};
+
+function_name(a value); this is called the function call , and as the name described it's call the function to do it's work;
+
+*/
+
+ int triangleDrawing(int n) 
+ {
+
+    int i, j,k;
+
+    
+
+    for(i = 1; i <= n; i++){ // To maintain the length of the triangle;
+
+        for(k=1; k <= n-i; k++){ // to draw the spaces
+            printf(" ");
+        };
+
+        for(j=1; j <= i; j++){ // To draw the stars;
+            printf(" X");
+        };
+
+        
+
+        printf("\n"); // to break the line
+
+    };
+                    
+};
 
 int main() {
 
@@ -25,7 +63,7 @@ int main() {
 
     // ==== la fonction printf demandera à l'utilisateur de choisir le numéro de mode qu'il souhaite. ==== // 
 
-    printf("Wich mode you want to use ? (Scientific calculator : 1) (counter : 2) (Punshiment game : 3) (Second level mathematical equation : 4): ");
+    printf("Wich mode you want to use ?\n Scientific calculator : 1\n counter : 2\n Punshiment game : 3\n Second level mathematical equation : 4\n Triangle Drawing : 5: ");
     scanf("%d", &mode);
     // ==== une boucle do while pour sortir du programme lorsque l'utilisateur veut ==== //
 
@@ -212,6 +250,7 @@ int main() {
             printf("\nDon't do it again!!");
             i++;
         };
+
     }else if(mode == 4) {
         double a,b,c,delta;
         printf("Pleas enter the value of the mathematical equation (a,b,c) : ");
@@ -231,17 +270,34 @@ int main() {
         }else if(delta < 0){
             printf("Well! the complex number is kinda an advanced topic for this project , so yeah thanks :) ");
         };
-                
-        break;
-    }
-    else {
+        
+        /*=== When the user chose the fifth mode call the triangleDrawing(n) to draw a triangle===*/
+
+        }else if(mode == 5){
+            int n;
+            // Asking to user the chose the length;
+
+            printf("Please enter a number : ");
+
+            scanf("%d" , &n);
+            // function call;
+
+            triangleDrawing(n);
+            break;
+
+        }else {
 
         printf("\nSorry! the mode you are asking for isn't available");
-    };
+        };
+            
+
+        
+   
     // ======= this part to change the value of var exit if the users want to exit from the programm ===== //
         printf("\nIf you want to exit from the programm type 0 if you want to continue type 1 : ");
         scanf("%d" , &exit);
     }while(exit == 1);
 };
+
 
 
