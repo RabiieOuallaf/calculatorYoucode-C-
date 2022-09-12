@@ -20,21 +20,21 @@ function_name(a value); this is called the function call , and as the name descr
 
 */
 
- int triangleDrawing(int n) 
+ int triangleDrawing(int n, int z) 
  {
 
     int i, j,k;
 
     
 
-    for(i = 1; i <= n; i++){ // To maintain the length of the triangle;
+    for(i = 0; i < n; i++){ // To maintain the length of the triangle;
 
-        for(k=1; k <= n-i; k++){ // to draw the spaces
+        for(k=n+z; k >= i; k--){ // to draw the spaces
             printf(" ");
         };
 
-        for(j=1; j <= i; j++){ // To draw the stars;
-            printf(" X");
+        for(j=1; j <= 2*i+1; j++){ // To draw the stars;
+            printf("X");
         };
 
         
@@ -305,14 +305,23 @@ int main() {
             printf("How many triangles you want to draw ? : ");
 
             scanf("%d", &r);
+
+
+
+            
             // Asking to user the chose the length;
             for(i = 1; i <= r; i++){
 
                 // function call;
 
-                triangleDrawing(n);
+                // triangle
+
+                triangleDrawing(n, r-i);
+                n++;
+                
 
             };
+
             
             
             
